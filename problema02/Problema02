@@ -1,0 +1,44 @@
+Inicio
+funcion principal 
+	dato1,d[0-n]
+	dato2,d[0-n]
+	dato3,d[0-n]
+	dato4,d[0-n]
+	dato5,d[0-n]
+	resultado,x(200)[{a-z},{A-Z},{BS}]<--""
+	<<"ingrese nota 1"
+	>>dato1
+	<<"ingrese nota 2"
+	>>dato2
+	<<"ingrese nota 3"
+	>>dato3
+	<<"ingrese nota 4"
+	>>dato4
+	<<"ingrese nota 5"
+	>>dato5
+	resultado<-- obtener_Promedio(dato1,dato2,dato3,dato4,dato5)
+	<<resultado
+fin funcion principal
+funcion obtener_Promedio(dato1,d;dato2,d;dato3,d;dato4,d;dato5,d):d
+	suma,d[0-n]
+	respuesta,x(200)[{a-z},{A-Z},{BS}]<--""
+	suma<-- dato1 + dato2 + dato3 + dato4 + dato5
+	Si suma >0 and suma <5 entonces
+		respuesta<-- "El promedio de las notas:" + dato1 + "," + dato2 + "," + dato3 + "," + dato4 + "," + dato5 + "es regular"
+		retornar respuesta
+	De lo contrario
+		Si suma >5.1 and suma <8 entonces
+		respuesta<-- "El promedio de las notas:" + dato1 + "," + dato2 + "," + dato3 + "," + dato4 + "," + dato5 + "es bueno"
+		retornar respuesta
+		De lo contario
+			Si suma >8.1 and suma <9 entonces
+			respuesta<-- "El promedio de las notas:" + dato1 + "," + dato2 + "," + dato3 + "," + dato4 + "," + dato5 + "es Muy bueno"
+			retornar respuesta
+			De lo contrario
+				respuesta<-- "El promedio de las notas:" + dato1 + "," + dato2 + "," + dato3 + "," + dato4 + "," + dato5 + "es Sobresaliente"
+				retornar respuesta
+			FinSi
+		FinSi
+	FinSi
+fin funcion obtener_Promedio
+Fin

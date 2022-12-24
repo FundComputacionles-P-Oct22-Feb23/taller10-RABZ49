@@ -1,0 +1,61 @@
+Inicio
+funcion principal
+	dato1,d[0-n]
+	dato2,d[0-n]
+	dato3,d[0-n]
+	dato4,d[0-n]
+	resultado,d[0-n]
+	opcion,i[0-n]
+	<<"¿que desea hacer?\n ->ingrese 1 para calcular el área de un cuadrado\n ->ingrese 2 para calcular el área de un triangulo\n ->ingrese 3 para calcular el área de un rectangulo"
+	>>opcion
+	Si opcion es == 1 entonces
+		<<"ingrese lado 1"
+		>>dato1
+		<<"ingrese lado 2"
+		>>dato2
+		<<"ingrese lado 3"
+		>>dato3
+		<<"ingrese lado 4"
+		>>dato4
+		resultado<-- obtener_areaCuadrado(dato1,dato2,dato3,dato4)
+		<<resultado
+	De lo contario
+		Si opcion es == 2 entonces
+			<<"ingrese base"
+			>>dato1
+			<<"ingrese la altura"
+			>>dato2
+			resultado<-- obtener_areaTriangulo(dato1,dato2)
+			<<resultado
+		De lo contario
+			Si opcion es == 3 entones 
+			<<"ingrese base"
+			>>dato1
+			<<"ingrese altura"
+			>>dato2
+			resultado<-- obtener_areaRectangulo(dato1,dato2)
+			<<resultado
+			De lo contrario
+				<<"ERROR el número ingresado no se encunetra en las opciones establecidas"
+			FinSi
+		FinSi
+	Finsi
+fin funcion principal
+funcion obtener_areaCuadrado(dato1,d;dato2,d;dato3,d;dato4,d):d
+	multiplicacion,d[0-n]<-- 0
+	multiplicacion <-- dato1 * dato2 * dato3 * dato4
+	retorna multiplicacion
+fin funcion obtener_areaCuadrado
+funcion	obtener_areaTriangulo(dato1,d;dato2,d;):d
+	operacion,d[0-n]
+	multiplicacion,d[0-n]<--0
+	multiplicacion<-- dato1 * dato2
+	operacion<-- multiplicacion / 2
+	retorna operacion
+fin funcion obtener_areaTriangulo
+funcion obtener_areaRectangulo(dato1,d;dato2,d;):d
+	operacion,d[0-n]
+	operacion<-- dato1 * dato2
+	retorna operacion
+fin funcion obtener_areaRectangulo
+Fin
